@@ -6,7 +6,7 @@
 ![web3j-cli03](images/web3j-cli03.png)
 
 # How to create java wrapper class for PancakeSwap V2 Pair. 
-1. We use USDT / WBNB pair as example.
+1. We use USDT / WBNB pair as example. https://pancakeswap.finance/info/pairs/0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae
 1. browse https://bscscan.com/address/0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae#code
 1. for your information, 0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae will be the contract address. 
 
