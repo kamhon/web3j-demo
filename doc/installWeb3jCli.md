@@ -7,12 +7,11 @@
 
 # How to create java wrapper class for PancakeSwap V2 Pair. 
 1. We use USDT / WBNB pair as example. https://pancakeswap.finance/info/pairs/0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae
-1. browse https://bscscan.com/address/0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae#code
 1. for your information, 0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae will be the contract address. 
 
 ## Get ABI from bscscan.com
 In order to get ABI, the smart contract need to verify and upload the solidity source code.
-1. Search the contract address bscscan.com.
+1. Search the contract address bscscan.com. Browse https://bscscan.com/address/0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae#code
    * Click on 'Contract' tab, scroll down until you see 'Contract ABI'. Click 'Copy' button.  
    ![web3j-cli04](images/web3j-cli04.png)
 1. create a json file with file name PancakePair.json, paste the ABI into PancakePair.json.
