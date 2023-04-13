@@ -8,13 +8,11 @@ import org.web3j.contracts.eip20.generated.ERC20;
 import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.protocol.http.HttpService;
 import org.web3j.tx.RawTransactionManager;
 import org.web3j.tx.gas.StaticGasProvider;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.concurrent.TimeUnit;
 
 public class TestErc20Token {
     private Log log = LogFactory.getLog(TestErc20Token.class);
@@ -24,12 +22,12 @@ public class TestErc20Token {
         Credentials credentials = TestUtil.getCredentials();
         RawTransactionManager transactionManager = TestUtil.newTransactionManager(web3j, credentials);
         StaticGasProvider staticGasProvider = TestUtil.getStaticGasProvider();
-        return ERC20.load(TestUtil.contractAddress, web3j, transactionManager, staticGasProvider);
+        return ERC20.load(TestUtil.erc20ContractAddress, web3j, transactionManager, staticGasProvider);
     }
 
     @Test
     public void testBalanceOf() throws Exception {
-        ERC20 erc20 = Erc20Util.loadReadonly(TestUtil.newWeb3j(), TestUtil.contractAddress);
+        ERC20 erc20 = Erc20Util.loadReadonly(TestUtil.newWeb3j(), TestUtil.erc20ContractAddress);
         BigInteger balanceInWei = erc20.balanceOf(TestUtil.walletAddress).send();
 
         BigDecimal balance = SysFormatter.fromWeiToEther(balanceInWei);
